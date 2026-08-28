@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "honorable-smp",
+  "version": "${version}",
+  "name": "HonorShields",
+  "description": "A class-based shield system with six oaths, fourteen ability shields, client-rendered geometry, cinematic VFX and soundscapes, condition progression, repair rituals, and configurable HUDs.",
+  "authors": ["HonorableSMP"],
+  "contact": {},
+  "license": "CC0-1.0",
+  "icon": "assets/honorable-smp/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.honorablesmp.honorshields.HonorShieldsMod"],
+    "client": ["com.honorablesmp.honorshields.client.HONORABLESMPClient"]
+  },
+  "mixins": [
+    "honorable-smp.mixins.json",
+    { "config": "honorable-smp.client.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": ">=0.156.0"
+  }
+}

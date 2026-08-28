@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "com.honorablesmp.honorshields.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+	"AbstractArrowMixin",
+	"AbstractArrowAccessor",
+	"AbstractContainerMenuMixin",
+    "CommandsMixin",
+    "FishingHookMixin",
+    "LivingEntityMixin",
+    "PlayerEntityMixin",
+	"ServerPlayerMixin",
+    "PowderSnowBlockMixin",
+    "TridentItemMixin",
+	"ThrownTridentMixin",
+    "VillagerMixin"
+  ],
+  "injectors": { "defaultRequire": 1 },
+  "overwrites": { "requireAnnotations": true }
+}

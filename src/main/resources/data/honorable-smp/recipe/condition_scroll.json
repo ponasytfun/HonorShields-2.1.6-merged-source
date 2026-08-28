@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": ["PNP", "OSO", "PNP"],
+  "key": {
+    "P": "minecraft:paper",
+    "N": "minecraft:netherite_ingot",
+    "O": "minecraft:ominous_trial_key",
+    "S": "minecraft:shield"
+  },
+  "result": {"id": "honorable-smp:condition_scroll"}
+}

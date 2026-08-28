@@ -1,0 +1,26 @@
+{
+  "parent": "honorable-smp:honor_awakened",
+  "display": {
+    "icon": {
+      "id": "minecraft:nether_star"
+    },
+    "title": {
+      "text": "Exalted Honor"
+    },
+    "description": {
+      "text": "Raise an oath shield to Exalted condition"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "exalted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 250
+  }
+}

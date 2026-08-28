@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": ["DGD", "GNG", "DGD"],
+  "key": {
+    "D": "minecraft:diamond",
+    "G": "minecraft:gold_ingot",
+    "N": "minecraft:netherite_scrap"
+  },
+  "result": {"id": "honorable-smp:reroll_token"}
+}
