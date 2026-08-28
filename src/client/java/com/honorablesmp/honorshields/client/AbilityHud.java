@@ -114,6 +114,7 @@ public final class AbilityHud {
 			case DAWN -> kind.equals("sun");
 			case WARDEN -> kind.equals("warden");
 			case VOID -> kind.equals("void");
+			case PLOW -> kind.equals("verdancy");
 			default -> false;
 		};
 	}

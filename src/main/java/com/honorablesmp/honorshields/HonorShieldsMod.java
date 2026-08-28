@@ -3,6 +3,7 @@ package com.honorablesmp.honorshields;
 import com.honorablesmp.honorshields.classsystem.ClassManager;
 import com.honorablesmp.honorshields.classsystem.PassiveTriggerHandler;
 import com.honorablesmp.honorshields.command.ClassCommand;
+import com.honorablesmp.honorshields.command.BuildInfoCommand;
 import com.honorablesmp.honorshields.command.LeaderboardCommand;
 import com.honorablesmp.honorshields.command.TestCommand;
 import com.honorablesmp.honorshields.command.TrustCommand;
@@ -39,6 +40,10 @@ import org.slf4j.LoggerFactory;
 
 public final class HonorShieldsMod implements ModInitializer {
 	public static final String MOD_ID = "honorable-smp";
+	/** Temporary, human-readable deployment marker for the Season 2 Tab 1 verification build. */
+	public static final String VERSION = "2.1.18-s2-tab1-test1";
+	public static final String BUILD_ID = "S2-TAB1-TEST1";
+	public static final String FEATURE_SET = "TAB1";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
@@ -59,6 +64,7 @@ public final class HonorShieldsMod implements ModInitializer {
 		PlowHandler.registerEvents();
 		CommandRegistrationCallback.EVENT.register((dispatcher, context, environment) -> {
 			OathCommand.register(dispatcher);
+			BuildInfoCommand.register(dispatcher);
 			ClassCommand.register(dispatcher);
 			LeaderboardCommand.register(dispatcher);
 			TestCommand.register(dispatcher);
@@ -104,7 +110,8 @@ public final class HonorShieldsMod implements ModInitializer {
 			SeasonTwoGameplay.restoreAll(server);
 			PlowHandler.restoreAll();
 		});
-		LOGGER.info("HonorShields initialized for Minecraft 26.2");
+		LOGGER.info("[HonorShields] Season 2 Tab 1 build loaded: {} ({})", VERSION, BUILD_ID);
+		LOGGER.info("[HonorShields] Feature set: {}", FEATURE_SET);
 	}
 
 	public static Identifier id(String path) { return Identifier.fromNamespaceAndPath(MOD_ID, path); }

@@ -25,6 +25,9 @@ public final class HONORABLESMPClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		HonorShieldsConfig.load();
+		HonorShieldsMod.LOGGER.info("[HonorShields] Season 2 Tab 1 client build loaded: {} ({})",
+			HonorShieldsMod.VERSION, HonorShieldsMod.BUILD_ID);
+		HonorShieldsMod.LOGGER.info("[HonorShields] Feature set: {}", HonorShieldsMod.FEATURE_SET);
 		KeybindHandler.register();
 		WorldVfxRenderer.register();
 		ClientPlayNetworking.registerGlobalReceiver(HonorShieldsPackets.OpenClassScreenPayload.TYPE, (payload, context) ->
